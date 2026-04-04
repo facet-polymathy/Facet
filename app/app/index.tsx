@@ -1,5 +1,6 @@
-import { View, Text } from 'react-native'
+import { Redirect } from 'expo-router';
 
-export default function Screen() {
-  return <View><Text>Placeholder</Text></View>
+export default function Root() {
+  // Hardcoded to auth — real session check wired in step 13
+  return <Redirect href="/(auth)" />;
 }

@@ -1,5 +1,12 @@
-import { View, Text } from 'react-native'
+import { Stack } from 'expo-router';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-export default function Screen() {
-  return <View><Text>Placeholder</Text></View>
+export default function RootLayout() {
+  return (
+    <SafeAreaProvider>
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(tabs)" />
+      </Stack>
+    </SafeAreaProvider>
+  );
 }
